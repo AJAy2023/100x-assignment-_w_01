@@ -20,7 +20,8 @@ class user {
 class teacher extends user{
     constructor(username , emailid,password)
     {   
-            super(username);
+            super(username);   
+            // if i remove the super it gives : - Must call super constructor in derived class before accessing 'this' or returning from derived constructor
         this.username = username;
         this.emailid = emailid;
         this.password = password;
