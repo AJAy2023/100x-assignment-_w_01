@@ -172,3 +172,4 @@ console.error(error.message);
 calc.clear();
 console.log(calc.getResult()); // 0
 
+
