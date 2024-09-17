@@ -1,20 +1,20 @@
 // We have already covered this in the second lesson, but as an easy recap try to code a counter in Javascript
 // It should go up as time goes by in intervals of 1 second
 
-function count()
-{
-    let count = 0;
-    let set = setInterval(function()
-{
-    count++;
-    console.log(count);
-    if(count == 10)
-    {
-        clearInterval(set);
-    }
-},1000);
-}
-count();
+// function count()
+// {
+//     let count = 0;
+//     let set = setInterval(function()
+// {
+//     count++;
+//     console.log(count);
+//     if(count == 10)
+//     {
+//         clearInterval(set);
+//     }
+// },1000);
+// }
+// count();
 
 /*
 ## Counter without setInterval
@@ -25,8 +25,11 @@ Without using setInterval, try to code a counter in Javascript. There is a hint 
 /*
 step1 - i need to take Date() and then i have to move the date every second for that  i have to use setinterval then . in that setInterval method i have to move that varible
 */
+
+let intervalId;
 function count1() {
-    setInterval(function() {
+   
+    intervalId = setInterval(function() {
         let date = new Date();
         let hours24 = date.getHours();
         let minutes = date.getMinutes();
@@ -50,6 +53,16 @@ function padZero(num) {
     return num < 10 ? '0' + num : num;
 }
 
+// To stop the interval
+function stopClock() {
+    clearInterval(intervalId);
+   
+}
+
 // Start the clock
 count1();
+stopClock();
+
+
+
 
