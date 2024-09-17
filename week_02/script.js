@@ -61,7 +61,8 @@ function stopClock() {
 
 // Start the clock
 count1();
-stopClock();
+setTimeout(stopClock, 5000);
+
 
 
 
